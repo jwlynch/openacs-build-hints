@@ -1,0 +1,1 @@
+./configure --enable-shared --enable-threads --with-magick=PREFIX/bin/MagickWand-config --with-tcl=PREFIX/lib

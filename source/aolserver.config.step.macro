@@ -1,0 +1,6 @@
+. PREFIX/lib/tclConfig.sh
+TCLSH=${TCL_EXEC_PREFIX}/bin/tclsh${TCL_VERSION}
+
+${TCLSH} nsconfig.tcl -install PREFIX
+
+# this may be old but it should still work... work on it! ./configure  --prefix=PREFIX --with-tcl=PREFIX/lib

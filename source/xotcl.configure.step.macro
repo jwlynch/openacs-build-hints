@@ -1,0 +1,1 @@
+./configure --with-tcl=PREFIX/lib --prefix=PREFIX --enable-threads --without-aolserver3

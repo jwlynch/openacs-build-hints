@@ -1,0 +1,2 @@
+(cd to unix, then...)
+../configure  --enable-threads --disable-tdomalloc --prefix=PREFIX --with-tcl=PREFIX/lib
