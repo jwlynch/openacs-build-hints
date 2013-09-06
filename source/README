@@ -1,0 +1,16 @@
+This is a collection of macros to assist the user by suggesting a configure step or make step
+for a number of pieces of the web stack which when installed will be capable of supporting one
+or more openacs instances.
+
+The Makefile has a list of the files which the builder will look at. It's been arranged so that
+when you change any of the macro files, running make will rewrite any hint files which depend
+on the changed files.
+
+You can begin by editing openacs-5ools.m4 and specifying the path to the prefix where all the 
+software will be installed, and the path to the postgres database configuration executable; using
+this, the build processes will use these paths to find what the build needs to complete.
+
+The normal thing to do for the configure steps, is run configure as stated in the hint file, then
+run make and make install. In a coupla cases, there is not a configure script, so in that case
+you'd run the make command in the hint file, and run it again with the word "install" at the end.
+
