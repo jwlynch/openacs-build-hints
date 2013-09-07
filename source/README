@@ -8,7 +8,9 @@ on the changed files.
 
 You can begin by editing openacs-5ools.m4 and specifying the path to the prefix where all the 
 software will be installed, and the path to the postgres database configuration executable; using
-this, the build processes will use these paths to find what the build needs to complete.
+this, the build processes will use these paths to find what the build needs to complete. Then,
+run make in that source dir to produce the actual hint files. Then just read those and run 
+the commands you find.
 
 The normal thing to do for the configure steps, is run configure as stated in the hint file, then
 run make and make install. In a coupla cases, there is not a configure script, so in that case
