@@ -1,0 +1,22 @@
+This whole thing came about as I was building my openacs web stacks, it started out
+as a dir for all the source tarballs and source trees. Then I noticed I was forgetting
+how to build or configure my sources. So far, my system looked like a dir:
+
+/home/me/source
+
+and I would download, untar, configure and build in this dir. Then, wanting to remember
+how I configured things so that I could quickly rebuild if I ever had to, I would write
+hint files that had the build steps on them.
+
+So, among all the other tarballs and hint files, I might have these:
+
+/home/me/source/tcl-configure-step and /home/me/source/tcl-8.5.13.tar.gz
+
+and the former is a hint for how to configure the latter.
+
+Then, I realized that because I wasn't managing the hint files together, some would get
+behind (say, when I changed the PREFIX in one hint file) and so I realized I needed
+a way to bring them all together, so I wrote macro files, added an include file and a
+makefile... a couola READMEs and put everything under GPL, any version (for now this 
+is your notice of same), and you have this project. Enjoy,
+
