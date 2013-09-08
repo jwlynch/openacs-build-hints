@@ -1,1 +1,5 @@
-./configure  --prefix=PREFIX --enable-threads
+cd unix
+
+# then run 
+
+../configure  --prefix=PREFIX --enable-threads
