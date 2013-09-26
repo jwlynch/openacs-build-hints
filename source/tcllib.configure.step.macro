@@ -1,1 +1,3 @@
-TCLSH=PREFIX/bin/tclsh8.6 ./configure --prefix=PREFIX
+. PREFIX/lib/tclConfig.sh
+
+TCLSH="PREFIX/bin/tclsh$TCL_VERSION" ./configure --prefix=PREFIX
