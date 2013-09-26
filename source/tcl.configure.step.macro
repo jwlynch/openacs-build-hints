@@ -2,4 +2,4 @@ cd unix
 
 # then run 
 
-../configure  --prefix=PREFIX --enable-threads
+./configure  --prefix=PREFIX --enable-threads
