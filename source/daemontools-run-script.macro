@@ -1,0 +1,30 @@
+#!/bin/sh 
+
+# aolserver4 recommends descriptors limit (FD_SETSIZE) to be set to 1024, 
+# which is standard for most OS distributions
+# For freebsd systems, uncomment following line:
+# ulimit -n 1024
+
+INSTALL_DIR=PREFIX
+
+SERVER=PUT_USER_HERE
+WEB_USER=${SERVER}
+
+SERVER_ROOT=/web/${SERVER}
+
+PG_CONFIG=PG_CONFIG_PATH
+
+export PGPORT=PUT_PG_PORT
+
+export LD_LIBRARY_PATH=${INSTALL_DIR}/lib:$($PG_CONFIG --pkglibdir)
+
+# give time for Postgres to come up
+# see http://openacs.org/forums/message-view?message_id=176100
+sleep 4
+
+exec ${INSTALL_DIR}/bin/nsd -it ${SERVER_ROOT}/etc/config.tcl -u ${WEB_USER} -g ${WEB_USER} BIND_PHRASE
+
+# this would be a bind phrase:  -b 173.248.173.66:80
+
+# For AOLserver 4 using privileged ports (usually < 1024), add the flag
+# -b youraddress:yourport to the nsd command

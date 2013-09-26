@@ -1,0 +1,5 @@
+#for naviserver, it looks like the configure script and the autoconf-based build system
+# is intact.and so far there is no sign of the tcl-based configure. This is probably a good
+# thing, as they picked one and stripped out the other.
+
+./configure  --prefix=PREFIX --with-tcl=PREFIX/lib

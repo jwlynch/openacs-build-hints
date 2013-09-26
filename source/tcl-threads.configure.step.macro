@@ -1,0 +1,3 @@
+(cd to unix then...)
+
+../configure --enable-threads --prefix=PREFIX --with-naviserver=PREFIX --with-tcl=PREFIX/lib

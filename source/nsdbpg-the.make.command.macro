@@ -1,0 +1,6 @@
+cd modules/nsdbpg
+
+pginc=$(PG_CONFIG_PATH --includedir)
+pglib=$(PG_CONFIG_PATH --libdir)
+
+make NAVISERVER=PREFIX PGINCLUDE=$pginc PGLIB=$pglib install
