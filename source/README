@@ -6,7 +6,7 @@ The Makefile has a list of the files which the builder will look at. It's been a
 when you change any of the macro files, running make will rewrite any hint files which depend
 on the changed files.
 
-You can begin by editing openacs-5ools.m4 and specifying the path to the prefix where all the 
+You can begin by editing openacs-tools.m4 and specifying the path to the prefix where all the 
 software will be installed, and the path to the postgres database configuration executable; using
 this, the build processes will use these paths to find what the build needs to complete. Then,
 run make in that source dir to produce the actual hint files. Then just read those and run 
